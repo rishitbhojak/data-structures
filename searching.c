@@ -1,6 +1,13 @@
 #include<stdio.h>
 #include<stdlib.h>
+
+int linearSearch(int arr[], int size, int element)
+{
+    
+}
+
 void main()
 {
-    return;
+
+    return 0;
 }
