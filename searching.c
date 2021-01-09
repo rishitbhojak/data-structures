@@ -14,6 +14,12 @@ int linearSearch(int arr[], int size, int element)
       return -1;
 }
 
+int binarySearch(int arr[], int size, int element)
+{
+   int mid,high,low;
+   mid = (low+high)/2;
+}
+
 int main()
 {
     int arr[] = {1,3,5,56,4,3,23,5,4,54634,56,34};
