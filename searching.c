@@ -16,7 +16,8 @@ int linearSearch(int arr[], int size, int element)
 
 int binarySearch(int arr[], int size, int element)
 {
-   int mid,high=size-1,low=0;
+   int mid, high = size-1, low = 0;
+   //keep searching until high and low converges
    while (low<=high)
    {
       mid = (low+high)/2;
