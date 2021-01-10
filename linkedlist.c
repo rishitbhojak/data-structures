@@ -10,7 +10,7 @@ void LinkedListTraversal(struct Node *ptr)
 {
     while (ptr != NULL)
     {
-        printf("%d", ptr->data);
+        printf("%d\n", ptr->data);
         ptr = ptr->next;
     }
 }
