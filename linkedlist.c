@@ -27,15 +27,15 @@ int main()
     third = (struct Node *)malloc(sizeof(struct Node));
     fourth = (struct Node *)malloc(sizeof(struct Node));
 
-    //Linking 1st and 2nd Node
+    //Linking First and Second Node
     head->data = 7;
     head->next = second;
 
-    //Link third and Second Node
+    //Link Second and Third Node
     second->data = 10;
     second->next = third;
 
-  //Link third and Second Node
+  //Link third and Fourth Node
     third->data = 14;
     third->next = fourth;
 
