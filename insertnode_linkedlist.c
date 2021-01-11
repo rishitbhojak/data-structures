@@ -20,6 +20,20 @@ struct Node * insertAtBeginning(struct Node *head, int data)
     ptr->data = data;
     return ptr; 
 }
+struct Node * insertAtIndex(struct Node *head, int data, int index)
+{
+    struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *p = head;
+    int i=0;
+    while (i!=index-1)
+    {
+        p=p->next;
+        i++;
+    }
+    ptr->next = p->next;
+    p->next=ptr;
+    return head;
+}
 int main()
 {
     struct Node *head;
@@ -49,7 +63,8 @@ int main()
     fourth->data = 12;
     fourth->next = NULL;
     LinkedListTraversal(head);
-    head = insertAtBeginning(head, 56);
+    // head = insertAtBeginning(head, 56);
+    head=insertAtIndex(head,56,1 );
     LinkedListTraversal(head);
     return 0;
 }
