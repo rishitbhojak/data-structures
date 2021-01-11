@@ -1,9 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
+
 struct Node {
     int data;
     struct Node *next;
 };
+
+// Traversing LinkedList
 
 void LinkedListTraversal(struct Node *ptr)
 {
@@ -13,6 +16,9 @@ void LinkedListTraversal(struct Node *ptr)
         ptr = ptr->next;
     }
 }
+
+// Case 1: Insert a Node at the Beginning of the List
+
 struct Node * insertAtBeginning(struct Node *head, int data)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
@@ -20,6 +26,9 @@ struct Node * insertAtBeginning(struct Node *head, int data)
     ptr->data = data;
     return ptr; 
 }
+
+// Case 2 : Insert a Node in between at a given index
+
 struct Node * insertAtIndex(struct Node *head, int data, int index)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
@@ -34,6 +43,9 @@ struct Node * insertAtIndex(struct Node *head, int data, int index)
     p->next=ptr;
     return head;
 }
+
+// Case 3 : Insert a Node at the End of the List
+
 struct Node * insertAtEnd(struct Node *head, int data)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
@@ -47,6 +59,9 @@ struct Node * insertAtEnd(struct Node *head, int data)
     ptr->next=NULL;
     return head;
 }
+
+// Insert a Node after a Given Node
+
 struct Node * insertAfterNode(struct Node *head,struct Node *prevNode, int data)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
@@ -57,6 +72,8 @@ struct Node * insertAfterNode(struct Node *head,struct Node *prevNode, int data)
 
     return head;
 }
+
+
 int main()
 {
     struct Node *head;
