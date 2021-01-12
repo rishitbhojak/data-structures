@@ -42,6 +42,7 @@ int main()
     //Terminate the list at the end
     fourth->data = 1;
     fourth->next = NULL;
+    
     LinkedListTraversal(head);
     return 0;
 }
