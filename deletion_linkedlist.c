@@ -14,7 +14,14 @@ void LinkedListTraversal(struct Node *ptr)
         ptr = ptr->next;
     }
 }
-
+// Case 1: Deleting 1st element from the LinkedList
+struct Node * deleteFirst(struct Node * head)
+{
+struct Node *ptr = head;
+head = head->next;
+free(ptr);
+return head;
+};
 int main()
 {
     struct Node *head;
@@ -29,7 +36,7 @@ int main()
     fourth = (struct Node *)malloc(sizeof(struct Node));
 
     //Linking First and Second Node
-    head->data = 7;
+    head->data = 4;
     head->next = second;
 
     //Link Second and Third Node
@@ -42,8 +49,9 @@ int main()
 
     //Terminate the list at the end
     fourth->data = 1;
-    fourth->next = NULL;
-    
+    fourth->next = NULL;   
+    LinkedListTraversal(head);
+    head= deleteFirst(head);
     LinkedListTraversal(head);
     return 0;
 }
