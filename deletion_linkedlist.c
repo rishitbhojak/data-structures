@@ -79,8 +79,8 @@ int main()
     fourth->data = 1;
     fourth->next = NULL;   
     LinkedListTraversal(head);
-//    head= deleteFirst(head);  Deleting 1st element from the linked list
-    // head = deleteAtIndex(head, 2); // For deleting an element at index= 2
+    //head= deleteFirst(head);  Deleting 1st element from the linked list
+    //head = deleteAtIndex(head, 2); // For deleting an element at index= 2
     head = deleteAtLast(head); // Deleting the last element from the list
     LinkedListTraversal(head);
     return 0;
