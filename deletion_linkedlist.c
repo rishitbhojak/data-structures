@@ -36,6 +36,20 @@ p->next = q->next;
 free(q);
 return head;
 }
+// Case 3: Deleting an element at the end of the LinkedList
+struct Node * deleteAtLast(struct Node * head)
+{
+struct Node *p = head;
+struct Node *q = head->next;
+while(q->next!=NULL)
+{
+    p=p->next;
+    q=q->next;
+}
+p->next = NULL;
+free(q);
+return head;
+}
 int main()
 {
     struct Node *head;
@@ -66,7 +80,8 @@ int main()
     fourth->next = NULL;   
     LinkedListTraversal(head);
 //    head= deleteFirst(head);  Deleting 1st element from the linked list
-    head = deleteAtIndex(head, 2); // For deleting an element at index= 2
+    // head = deleteAtIndex(head, 2); // For deleting an element at index= 2
+    head = deleteAtLast(head); // Deleting the last element from the list
     LinkedListTraversal(head);
     return 0;
 }
