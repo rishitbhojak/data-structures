@@ -10,13 +10,17 @@ void LinkedListTraversal(struct Node * head)
 {
     struct Node *ptr = head;
      printf("Element is %d", ptr->data);
-        ptr = ptr->next;
-    
-    
+        ptr = ptr->next;    
     do{
         printf("Element is %d", ptr->data);
         ptr = ptr->next;
     }while(ptr!=head);
+}
+struct Node * insertAtFirst(struct Node *head, int data)
+{
+    struct Node * ptr = (struct Node *)malloc(sizeof(struct Node));
+    struct Node *p = head->next;
+    ptr->data=data;
 }
 int main()
 {
@@ -47,5 +51,6 @@ int main()
     fourth->data = 1;
     fourth->next = NULL;
     LinkedListTraversal(head);
+    insertAtFirst(head,80);
     return 0;
 }
