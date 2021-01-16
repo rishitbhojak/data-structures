@@ -11,12 +11,12 @@ void LinkedListTraversal(struct Node * head)
     struct Node *ptr = head;
      printf("Element is %d", ptr->data);
         ptr = ptr->next;
-    }
-    while(ptr!=head)
-    {
+    
+    
+    do{
         printf("Element is %d", ptr->data);
         ptr = ptr->next;
-    }
+    }while(ptr!=head);
 }
 int main()
 {
