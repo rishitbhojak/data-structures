@@ -19,8 +19,13 @@ void LinkedListTraversal(struct Node * head)
 struct Node * insertAtFirst(struct Node *head, int data)
 {
     struct Node * ptr = (struct Node *)malloc(sizeof(struct Node));
-    struct Node *p = head->next;
     ptr->data=data;
+    struct Node *p = head->next;
+    while (p->next!=head)
+    {
+        p=p->next;
+    }
+    //At this stage, p points to the last node of this Circular LL
 }
 int main()
 {
@@ -52,5 +57,6 @@ int main()
     fourth->next = NULL;
     LinkedListTraversal(head);
     insertAtFirst(head,80);
+    LinkedListTraversal(head);
     return 0;
 }
