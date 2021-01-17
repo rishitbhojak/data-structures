@@ -59,8 +59,10 @@ int main()
     //Terminate the list at the end
     fourth->data = 1;
     fourth->next = NULL;
+    printf("Circular LL Before insertion: \n ");
     LinkedListTraversal(head);
-    insertAtFirst(head,80);
+    insertAtFirst(head,54);
+    printf("Circular LL After insertion: \n ");
     LinkedListTraversal(head);
     return 0;
 }
