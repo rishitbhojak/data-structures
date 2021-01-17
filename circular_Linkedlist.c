@@ -26,6 +26,10 @@ struct Node * insertAtFirst(struct Node *head, int data)
         p=p->next;
     }
     //At this stage, p points to the last node of this Circular LL
+    p->next=ptr;
+    ptr->next=head;
+    head= ptr;
+    return head;
 }
 int main()
 {
