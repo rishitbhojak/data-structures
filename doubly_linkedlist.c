@@ -9,6 +9,6 @@ struct Node{
 
 int main()
 {
-    struct Node * N1 = (struct Node *)malloc(sizeof(struct Node));
+    struct Node * N1 = (struct Node *)malloc(sizeof(struct Node)); 
     return 0;
 }
