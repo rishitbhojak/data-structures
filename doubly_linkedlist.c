@@ -32,7 +32,7 @@ int choice =0;
             insertion_beginning();  
             break;  
             case 2:  
-                    insertion_last();  
+            insertion_last();  
             break;  
             case 3:  
             insertion_specified();  
