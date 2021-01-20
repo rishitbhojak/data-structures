@@ -6,6 +6,8 @@ struct Stack{
     int top;
     int *arr;
 };
+struct Stack s;
+
 int main()
 {
     return 0;
