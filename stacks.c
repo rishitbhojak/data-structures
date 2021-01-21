@@ -32,7 +32,7 @@ void push(struct stack *ptr,int val)
 {
     if(isFull(ptr))
     {
-        printf("Stack Overflow\n");
+        printf("Stack Overflow! Cannot push %d to the stack\n",val);
     }
     else
     {
@@ -41,7 +41,20 @@ void push(struct stack *ptr,int val)
     }
     
 }
-
+int pop(struct stack *ptr)
+{
+    if (isEmpty(ptr))
+    {
+        printf("Stack Underflow! Cannot pop %d from the stack", val);
+        return -1;
+    }
+    else
+    {
+        int val = ptr->arr[ptr->top];
+        ptr->top--;
+        return val;
+    }
+}
 int main()
 {
     struct stack *sp = (struct stack *)malloc(sizeof(struct stack));
@@ -60,7 +73,8 @@ int main()
           push(sp, 56);
            push(sp, 56);
             push(sp, 56);
-             push(sp, 56);
+             push(sp, 56);//=====>>>>> Pushed 10 values
+             push(sp, 56); // Stack overflow from here
     printf("After pushing, Full = %d\n", isFull(sp));
     printf("After pushing, Empty = %d\n", isEmpty(sp));
     return 0;
