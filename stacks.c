@@ -28,6 +28,11 @@ int isEmpty(struct stack *ptr){
     }
 }
 
+void push(struct stack *ptr,int val)
+{
+    
+}
+
 int main()
 {
     struct stack *sp = (struct stack *)malloc(sizeof(struct stack));
