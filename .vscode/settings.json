@@ -2,5 +2,6 @@
     "files.associations": {
         "arrays-1.C": "cpp",
         "arrays-2.C": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

@@ -10,5 +10,6 @@ struct Stack s;
 
 int main()
 {
+    struct stack *sp;
     return 0;
 }
