@@ -12,5 +12,6 @@ int main()
     sp->size=10;
     sp->top=-1;
     sp->ar = (int *)malloc(sp->size * sizeof(int));
+    printf("Stack created successfully");
     return 0;
 }
