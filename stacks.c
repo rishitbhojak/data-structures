@@ -74,7 +74,7 @@ int main()
            push(sp, 8);
             push(sp, 9);
              push(sp, 10);//=====>>>>> Pushed 10 values
-             push(sp, 11); // Stack overflow from here
+              push(sp, 11); // Stack overflow from here
     printf("After pushing, Full = %d\n", isFull(sp));
     printf("After pushing, Empty = %d\n", isEmpty(sp));
     printf("Popped %d from the stack\n", pop(sp));
