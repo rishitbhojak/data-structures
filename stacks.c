@@ -8,7 +8,7 @@ struct stack{
 };
 
 int isFull(struct stack *ptr){
-    if(ptr->top == -1)
+    if(ptr->top == ptr->size-1)
     {
         return 1;
     }
@@ -33,7 +33,9 @@ int main()
     struct stack *sp = (struct stack *)malloc(sizeof(struct stack));
     sp->size=10;
     sp->top=-1;
-    sp->ar = (int *)malloc(sp->size * sizeof(int));
-    printf("Stack created successfully");
+    sp->arr = (int *)malloc(sp->size * sizeof(int));
+    printf("Stack created successfully\n");
+    printf("%d\n", isFull(sp));
+    printf("%d\n", isEmpty(sp));
     return 0;
 }
