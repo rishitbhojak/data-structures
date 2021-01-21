@@ -77,6 +77,9 @@ int main()
               push(sp, 11); // Stack overflow from here
     printf("After pushing, Full = %d\n", isFull(sp));
     printf("After pushing, Empty = %d\n", isEmpty(sp));
-    printf("Popped %d from the stack\n", pop(sp));
+    printf("Popped %d from the stack\n", pop(sp)); // Last in First out 1st
+    printf("Popped %d from the stack\n", pop(sp)); // Last in First out 2nd
+    printf("Popped %d from the stack\n", pop(sp)); // Last in First out 3rd
+    printf("Popped %d from the stack\n", pop(sp)); // Last in First out 4th
     return 0;
 }
