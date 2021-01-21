@@ -49,10 +49,19 @@ int main()
     sp->top=-1;
     sp->arr = (int *)malloc(sp->size * sizeof(int));
     printf("Stack created successfully\n");
-    printf("%d\n", isFull(sp));
-    printf("%d\n", isEmpty(sp));
+    printf("Before pushing, Full = %d\n", isFull(sp));
+    printf("Before pushing, Empty = %d\n", isEmpty(sp));
     push(sp, 56);
-    printf("%d\n", isFull(sp));
-    printf("%d\n", isEmpty(sp));
+     push(sp, 56);
+      push(sp, 56);
+       push(sp, 56);
+        push(sp, 56);
+         push(sp, 56);
+          push(sp, 56);
+           push(sp, 56);
+            push(sp, 56);
+             push(sp, 56);
+    printf("After pushing, Full = %d\n", isFull(sp));
+    printf("After pushing, Empty = %d\n", isEmpty(sp));
     return 0;
 }
