@@ -7,8 +7,26 @@ struct stack{
     int *arr;
 };
 
-int isFull(struct stack *ptr){}
-int isEmpty(struct stack *ptr){}
+int isFull(struct stack *ptr){
+    if(ptr->top == -1)
+    {
+        return 1;
+    }
+    else 
+    {
+        return 0;
+    }
+}
+int isEmpty(struct stack *ptr){
+    if(ptr->top == -1)
+    {
+        return 1;
+    }
+    else 
+    {
+        return 0;
+    }
+}
 
 int main()
 {
