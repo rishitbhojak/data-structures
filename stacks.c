@@ -6,6 +6,10 @@ struct stack{
     int top;
     int *arr;
 };
+
+int isFull(struct stack *ptr){}
+int isEmpty(struct stack *ptr){}
+
 int main()
 {
     struct stack *sp = (struct stack *)malloc(sizeof(struct stack));
