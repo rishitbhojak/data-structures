@@ -45,7 +45,7 @@ int pop(struct stack *ptr)
 {
     if (isEmpty(ptr))
     {
-        printf("Stack Underflow! Cannot pop %d from the stack", val);
+        printf("Stack Underflow! Cannot pop from the stack");
         return -1;
     }
     else
@@ -64,18 +64,19 @@ int main()
     printf("Stack created successfully\n");
     printf("Before pushing, Full = %d\n", isFull(sp));
     printf("Before pushing, Empty = %d\n", isEmpty(sp));
-    push(sp, 56);
-     push(sp, 56);
-      push(sp, 56);
-       push(sp, 56);
-        push(sp, 56);
-         push(sp, 56);
-          push(sp, 56);
-           push(sp, 56);
-            push(sp, 56);
-             push(sp, 56);//=====>>>>> Pushed 10 values
-             push(sp, 56); // Stack overflow from here
+    push(sp, 1);
+     push(sp, 2);
+      push(sp, 3);
+       push(sp, 4);
+        push(sp, 5);
+         push(sp, 6);
+          push(sp, 7);
+           push(sp, 8);
+            push(sp, 9);
+             push(sp, 10);//=====>>>>> Pushed 10 values
+             push(sp, 11); // Stack overflow from here
     printf("After pushing, Full = %d\n", isFull(sp));
     printf("After pushing, Empty = %d\n", isEmpty(sp));
+    printf("Popped %d from the stack\n", pop(sp));
     return 0;
 }
