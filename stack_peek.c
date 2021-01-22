@@ -58,11 +58,16 @@ int pop(struct stack *ptr)
 
 int peek(struct stack *sp, int i)
 {
-    if (sp->top-i+1<0)
+    int arrayInd = sp->top-i+1;
+    if (arrayInd<0)
     {
        printf("Not a valid position\n");
+       return -1;
     }
-    
+    else
+    {
+        return sp->arr[arrayInd];
+    }
 }
 
 int main()
