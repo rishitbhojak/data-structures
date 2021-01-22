@@ -96,5 +96,9 @@ int main()
     printf("Popped %d from the stack\n", pop(sp)); // Last in First out 2nd
     printf("Popped %d from the stack\n", pop(sp)); // Last in First out 3rd
     printf("Popped %d from the stack\n", pop(sp)); // Last in First out 4th
+    for(int j=0; j<sp->top;j++)
+    {
+      printf("The value at index %d is %d", j , peek(j));
+    }
     return 0;
 }
